@@ -7,10 +7,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.0",
     "firebase": "7.11.0",
     "next": "latest",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.36",
