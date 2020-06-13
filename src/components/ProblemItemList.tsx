@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { IconContext } from "react-icons";
 import { IoMdLink } from "react-icons/io";
 import { FaRegCheckCircle, FaRegCircle } from "react-icons/fa";
 
@@ -17,27 +16,27 @@ const ProblemItemList: React.FC<Props> = (props) => {
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="dimgray" />
+        <LinkIcon color="dimgray"></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="dimgray" />
+        <LinkIcon color="dimgray"></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>ITP1_7_B - How Many Ways?</ProblemItemTitle>
-        <LinkIcon color="dimgray" />
+        <LinkIcon color="dimgray"></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="dimgray" />
+        <LinkIcon color="dimgray"></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="dimgray" />
+        <LinkIcon color="dimgray"></LinkIcon>
       </ProblemItem>
     </Base>
   );
