@@ -54,7 +54,7 @@ const Base = styled.div`
 const ProblemMenu = styled.div`
   padding-bottom: 36px;
   font-size: 24px;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 `;
 
 const ProblemItem = styled.div`
@@ -86,6 +86,10 @@ const ProblemItemTitle = styled.div`
   font-style: normal;
   font-size: 22px;
   font-family: "Roboto", sans-serif;
+
+  &:hover {
+    color: lightsteelblue;
+  }
 `;
 
 export default ProblemItemList;
