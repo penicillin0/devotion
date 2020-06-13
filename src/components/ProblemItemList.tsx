@@ -8,6 +8,7 @@ type Props = {};
 const ProblemItemList: React.FC<Props> = (props) => {
   return (
     <Base>
+      <ProblemMenu>問題一覧</ProblemMenu>
       <ProblemItem>
         <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
         <ProblemItemTitle>ITP1_7_B - How Many Ways?</ProblemItemTitle>
@@ -50,10 +51,16 @@ const Base = styled.div`
   margin: 0 auto;
 `;
 
+const ProblemMenu = styled.div`
+  padding-bottom: 36px;
+  padding-left: 24px;
+  font-size: 24px;
+  font-family: Noto Sans JP;
+`;
+
 const ProblemItem = styled.div`
+  padding-bottom: 24px;
   display: flex;
-  height: 50px;
-  padding-bottom: 10px;
   align-item: center;
 `;
 
@@ -76,14 +83,11 @@ const LinkIcon = styled(IoMdLink)`
 `;
 
 const ProblemItemTitle = styled.div`
-  flex-basis: 480px;
+  flex-basis: 460px;
 
   font-style: normal;
   font-size: 22px;
   font-family: "Roboto", sans-serif;
-
-  display: flex;
-  flex-direction: column;
 `;
 
 export default ProblemItemList;
