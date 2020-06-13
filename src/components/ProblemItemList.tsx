@@ -53,15 +53,14 @@ const Base = styled.div`
 
 const ProblemMenu = styled.div`
   padding-bottom: 36px;
-  padding-left: 24px;
   font-size: 24px;
-  font-family: Noto Sans JP;
+  font-family: 'Noto Sans JP', sans-serif;
 `;
 
 const ProblemItem = styled.div`
   padding-bottom: 24px;
   display: flex;
-  align-item: center;
+  align-items: center;
 `;
 
 const CheckCircleIcon = styled(FaRegCheckCircle)`
@@ -71,7 +70,6 @@ const CheckCircleIcon = styled(FaRegCheckCircle)`
 `;
 
 const EmptyCircleIcon = styled(FaRegCircle)`
-  text-align: center;
   padding-right: 38px;
   font-size: 36px;
 `;
