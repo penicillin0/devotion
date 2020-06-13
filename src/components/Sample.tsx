@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { IconContext } from "react-icons";
 import { IoMdLink } from "react-icons/io";
-import { FaRegCircle } from "react-icons/fa";
-import { FaRegCheckCircle } from "react-icons/fa";
+import { FaRegCheckCircle, FaRegCircle } from "react-icons/fa";
 
 type Props = {};
 
