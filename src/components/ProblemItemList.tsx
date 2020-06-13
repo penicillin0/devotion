@@ -11,32 +11,32 @@ const ProblemItemList: React.FC<Props> = (props) => {
       <ProblemItem>
         <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
         <ProblemItemTitle>ITP1_7_B - How Many Ways?</ProblemItemTitle>
-        <LinkIcon color="dimgray"></LinkIcon>
+        <LinkIcon color="silver"></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="dimgray"></LinkIcon>
+        <LinkIcon color="silver"></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="dimgray"></LinkIcon>
+        <LinkIcon color="silver"></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>ITP1_7_B - How Many Ways?</ProblemItemTitle>
-        <LinkIcon color="dimgray"></LinkIcon>
+        <LinkIcon color="silver"></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="dimgray"></LinkIcon>
+        <LinkIcon color="silver"></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="dimgray"></LinkIcon>
+        <LinkIcon color="silver"></LinkIcon>
       </ProblemItem>
     </Base>
   );
@@ -48,39 +48,38 @@ const Base = styled.div`
   padding-top: 100px;
   width: 800px;
   margin: 0 auto;
-  font-size: 24px;
 `;
 
 const ProblemItem = styled.div`
   display: flex;
   height: 50px;
+  padding-bottom: 10px;
   align-item: center;
 `;
 
 const CheckCircleIcon = styled(FaRegCheckCircle)`
   text-align: center;
-  flex-basis: 8%;
-  font-size: 33px;
-  top: 50%;
+  padding-right: 38px;
+  font-size: 36px;
 `;
 
 const EmptyCircleIcon = styled(FaRegCircle)`
   text-align: center;
-  flex-basis: 8%;
-  font-size: 33px;
-  top: 50%;
+  padding-right: 38px;
+  font-size: 36px;
 `;
 
 const LinkIcon = styled(IoMdLink)`
   text-align: center;
-  font-size: 35px;
-  flex-basis: 10%;
+  font-size: 40px;
+  flex-basis: 48px;
 `;
 
 const ProblemItemTitle = styled.div`
-  flex-basis: 55%;
+  flex-basis: 480px;
 
   font-style: normal;
+  font-size: 22px;
   font-family: "Roboto", sans-serif;
 
   display: flex;
