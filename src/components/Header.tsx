@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 
-const Header: React.FC<{ pathname: string }> = ({ pathname }) => (
+const Header: React.FC<{ pathname?: string }> = ({ pathname }) => (
   <header>
     <Link href="/">
       <a className={pathname === "/" ? "is-active" : ""}>Home</a>
