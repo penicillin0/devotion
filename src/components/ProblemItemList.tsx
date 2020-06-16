@@ -12,32 +12,32 @@ const ProblemItemList: React.FC<Props> = (props) => {
       <ProblemItem>
         <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
         <ProblemItemTitle>ITP1_7_B - How Many Ways?</ProblemItemTitle>
-        <LinkIcon color="silver"></LinkIcon>
+        <LinkIcon></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="silver"></LinkIcon>
+        <LinkIcon></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="silver"></LinkIcon>
+        <LinkIcon></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>ITP1_7_B - How Many Ways?</ProblemItemTitle>
-        <LinkIcon color="silver"></LinkIcon>
+        <LinkIcon></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="silver"></LinkIcon>
+        <LinkIcon></LinkIcon>
       </ProblemItem>
       <ProblemItem>
         <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
         <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon color="silver"></LinkIcon>
+        <LinkIcon></LinkIcon>
       </ProblemItem>
     </Base>
   );
@@ -78,6 +78,11 @@ const LinkIcon = styled(IoMdLink)`
   text-align: center;
   font-size: 40px;
   flex-basis: 48px;
+  color: #BDBDBD;
+  cursor:pointer;
+  &:hover {
+    color: #0b8aff;
+  }
 `;
 
 const ProblemItemTitle = styled.div`
@@ -86,9 +91,9 @@ const ProblemItemTitle = styled.div`
   font-style: normal;
   font-size: 22px;
   font-family: "Roboto", sans-serif;
-
+  cursor:pointer;
   &:hover {
-    color: lightsteelblue;
+    color: #0b8aff;
   }
 `;
 
