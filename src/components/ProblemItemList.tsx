@@ -34,7 +34,11 @@ const ProblemItemList: React.FC<Props> = (props) => {
       <ProblemMenu>問題一覧</ProblemMenu>
       {problems.map((problem) => (
         <ProblemItem>
-          {problem.isSolved? <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon> : <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>}
+          {problem.isSolved ? (
+            <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
+          ) : (
+            <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
+          )}
           <ProblemItemTitle>{problem.name}</ProblemItemTitle>
           <a href={problem.link} target="_blank">
             <LinkIcon></LinkIcon>
