@@ -5,40 +5,42 @@ import { FaRegCheckCircle, FaRegCircle } from "react-icons/fa";
 
 type Props = {};
 
+const problems = [
+  {
+    isSolved: true,
+    name: "ITP1_7_B - How Many Ways?",
+    link: "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_7_B&lang=ja",
+  },
+  {
+    isSolved: false,
+    name: "ITP1_7_B - How Many Ways?",
+    link: "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_7_B&lang=ja",
+  },
+  {
+    isSolved: false,
+    name: "三井住友信託銀行プログラミ...",
+    link: "https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_d",
+  },
+  {
+    isSolved: true,
+    name: "三井住友信託銀行プログラミ...",
+    link: "https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_d",
+  },
+];
+
 const ProblemItemList: React.FC<Props> = (props) => {
   return (
     <Base>
       <ProblemMenu>問題一覧</ProblemMenu>
-      <ProblemItem>
-        <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
-        <ProblemItemTitle>ITP1_7_B - How Many Ways?</ProblemItemTitle>
-        <LinkIcon></LinkIcon>
-      </ProblemItem>
-      <ProblemItem>
-        <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
-        <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon></LinkIcon>
-      </ProblemItem>
-      <ProblemItem>
-        <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
-        <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon></LinkIcon>
-      </ProblemItem>
-      <ProblemItem>
-        <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
-        <ProblemItemTitle>ITP1_7_B - How Many Ways?</ProblemItemTitle>
-        <LinkIcon></LinkIcon>
-      </ProblemItem>
-      <ProblemItem>
-        <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
-        <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon></LinkIcon>
-      </ProblemItem>
-      <ProblemItem>
-        <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
-        <ProblemItemTitle>三井住友信託銀行プログラミ...</ProblemItemTitle>
-        <LinkIcon></LinkIcon>
-      </ProblemItem>
+      {problems.map((problem) => (
+        <ProblemItem>
+          {problem.isSolved? <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon> : <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>}
+          <ProblemItemTitle>{problem.name}</ProblemItemTitle>
+          <a href={problem.link} target="_blank">
+            <LinkIcon></LinkIcon>
+          </a>
+        </ProblemItem>
+      ))}
     </Base>
   );
 };
@@ -78,8 +80,8 @@ const LinkIcon = styled(IoMdLink)`
   text-align: center;
   font-size: 40px;
   flex-basis: 48px;
-  color: #BDBDBD;
-  cursor:pointer;
+  color: #bdbdbd;
+  cursor: pointer;
   &:hover {
     color: #0b8aff;
   }
@@ -91,7 +93,7 @@ const ProblemItemTitle = styled.div`
   font-style: normal;
   font-size: 22px;
   font-family: "Roboto", sans-serif;
-  cursor:pointer;
+  cursor: pointer;
   &:hover {
     color: #0b8aff;
   }
