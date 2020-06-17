@@ -40,9 +40,9 @@ const ProblemItemList: React.FC<Props> = (props) => {
             <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
           )}
           <ProblemItemTitle>{problem.name}</ProblemItemTitle>
-          <a href={problem.link} target="_blank">
+          <ProblemLink href={problem.link} target="_blank">
             <LinkIcon></LinkIcon>
-          </a>
+          </ProblemLink>
         </ProblemItem>
       ))}
     </Base>
@@ -69,6 +69,11 @@ const ProblemItem = styled.div`
   align-items: center;
 `;
 
+const ProblemLink = styled.a`
+  display: flex;
+  align-items: center;
+`;
+
 const CheckCircleIcon = styled(FaRegCheckCircle)`
   text-align: center;
   padding-right: 38px;
@@ -82,7 +87,7 @@ const EmptyCircleIcon = styled(FaRegCircle)`
 
 const LinkIcon = styled(IoMdLink)`
   text-align: center;
-  font-size: 40px;
+  font-size: 36px;
   flex-basis: 48px;
   color: #bdbdbd;
   cursor: pointer;
