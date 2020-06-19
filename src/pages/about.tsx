@@ -1,12 +1,14 @@
-import App from '../components/App'
-import ProblemItemList from '../components/ProblemItemList'
+import App from "../components/App";
+import ProblemItemList from "../components/ProblemItemList";
+import { RecoilRoot } from "recoil";
 
 export default function About() {
   return (
-    <App>
-      <p>About Page</p>
-      <ProblemItemList></ProblemItemList>
-    </App>
-  )
+    <RecoilRoot>
+      <App>
+        <p>About Page</p>
+        <ProblemItemList></ProblemItemList>
+      </App>
+    </RecoilRoot>
+  );
 }
-

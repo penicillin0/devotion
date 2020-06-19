@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { IoMdLink } from "react-icons/io";
 import { FaRegCheckCircle, FaRegCircle } from "react-icons/fa";
+import { practicesState } from "./App";
+import { useRecoilValue } from "recoil";
 
 type Props = {};
 
@@ -29,6 +31,8 @@ const problems = [
 ];
 
 const ProblemItemList: React.FC<Props> = (props) => {
+  const practices = useRecoilValue(practicesState);
+  console.log(practices);
   return (
     <Base>
       <ProblemMenu>問題一覧</ProblemMenu>
