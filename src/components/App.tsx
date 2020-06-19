@@ -5,8 +5,15 @@ import firebase from "../firebase/clientApp";
 const App = ({ children }) => {
   useEffect(() => {
     console.log(`[App.tsx:8] process.env: `, process.env);
-    // const practiceRef = firebase.database().ref("/practices");
-    // console.log(`[App.tsx:8] practiceRef: `, practiceRef);
+    const db = firebase.firestore();
+    const practices = db
+      .collection("practices")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log(`${doc.id} => ${doc.data()}`);
+        });
+      });
   }, []);
 
   return (
