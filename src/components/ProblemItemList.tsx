@@ -32,35 +32,42 @@ const ProblemItemList: React.FC<Props> = (props) => {
   return (
     <Base>
       <ProblemMenu>問題一覧</ProblemMenu>
-      {problems.map((problem) => (
-        <ProblemItem>
-          {problem.isSolved ? (
-            <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
-          ) : (
-            <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
-          )}
-          <ProblemItemTitle>{problem.name}</ProblemItemTitle>
-          <ProblemLink href={problem.link} target="_blank">
-            <LinkIcon></LinkIcon>
-          </ProblemLink>
-        </ProblemItem>
-      ))}
+      <ProblemItems>
+        {problems.map((problem) => (
+          <ProblemItem>
+            {problem.isSolved ? (
+              <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
+            ) : (
+              <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
+            )}
+            <ProblemItemTitle>{problem.name}</ProblemItemTitle>
+            <ProblemLink href={problem.link} target="_blank">
+              <LinkIcon></LinkIcon>
+            </ProblemLink>
+          </ProblemItem>
+        ))}
+      </ProblemItems>
     </Base>
   );
 };
 
 const Base = styled.div`
-  padding-right: 180px;
-  padding-left: 180px;
-  padding-top: 100px;
-  width: 800px;
+  position: relative;
+  width: 780px;
+  height: 1024px;
   margin: 0 auto;
 `;
 
 const ProblemMenu = styled.div`
-  padding-bottom: 36px;
-  font-size: 24px;
-  font-family: "Noto Sans JP", sans-serif;
+  padding-left: 48px;
+  font-size: 48px;
+  font-family: "Poppins", "Noto Sans JP", sans-serif;
+`;
+
+const ProblemItems = styled.div`
+  padding-top: 36px;
+  padding-left: 48px;
+  width: 780px;
 `;
 
 const ProblemItem = styled.div`
@@ -76,19 +83,20 @@ const ProblemLink = styled.a`
 
 const CheckCircleIcon = styled(FaRegCheckCircle)`
   text-align: center;
-  padding-right: 38px;
-  font-size: 36px;
+  padding-right: 36px;
+  width: 36px;
+  height: 36px;
 `;
 
 const EmptyCircleIcon = styled(FaRegCircle)`
   padding-right: 38px;
-  font-size: 36px;
+  width: 36px;
+  height: 36px;
 `;
 
 const LinkIcon = styled(IoMdLink)`
   text-align: center;
   font-size: 36px;
-  flex-basis: 48px;
   color: #bdbdbd;
   cursor: pointer;
   &:hover {
@@ -97,11 +105,10 @@ const LinkIcon = styled(IoMdLink)`
 `;
 
 const ProblemItemTitle = styled.div`
-  flex-basis: 460px;
+  flex-basis: 500px;
 
-  font-style: normal;
-  font-size: 22px;
-  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-family: "Poppins", "Roboto", sans-serif;
   cursor: pointer;
   &:hover {
     color: #0b8aff;
