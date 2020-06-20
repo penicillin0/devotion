@@ -16,11 +16,6 @@ const PracticeItemList: React.FC<Props> = (props) => {
       <PracticeItems>
         {practices.map((practice) => (
           <PracticeItem>
-            {/* {practice.isSolved ? (
-              <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
-            ) : (
-              <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
-            )} */}
             <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
             <PracticeItemTitle>{practice.title}</PracticeItemTitle>
             <PracticeLink href={practice.url} target="_blank">
