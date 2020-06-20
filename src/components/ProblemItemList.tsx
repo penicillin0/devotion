@@ -7,87 +7,79 @@ import { useRecoilValue } from "recoil";
 
 type Props = {};
 
-const problems = [
-  {
-    isSolved: true,
-    name: "ITP1_7_B - How Many Ways?",
-    link: "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_7_B&lang=ja",
-  },
-  {
-    isSolved: false,
-    name: "ITP1_7_B - How Many Ways?",
-    link: "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_7_B&lang=ja",
-  },
-  {
-    isSolved: false,
-    name: "三井住友信託銀行プログラミ...",
-    link: "https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_d",
-  },
-  {
-    isSolved: true,
-    name: "三井住友信託銀行プログラミ...",
-    link: "https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_d",
-  },
-];
-
-const ProblemItemList: React.FC<Props> = (props) => {
+const PracticeItemList: React.FC<Props> = (props) => {
   const practices = useRecoilValue(practicesState);
   console.log(practices);
   return (
     <Base>
-      <ProblemMenu>問題一覧</ProblemMenu>
-      {problems.map((problem) => (
-        <ProblemItem>
-          {problem.isSolved ? (
+      <PracticeMenu>問題一覧</PracticeMenu>
+      <PracticeItems>
+        {practices.map((practice) => (
+          <PracticeItem>
+            {/* {practice.isSolved ? (
+              <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
+            ) : (
+              <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
+            )} */}
             <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
-          ) : (
-            <EmptyCircleIcon color="dimgray"></EmptyCircleIcon>
-          )}
-          <ProblemItemTitle>{problem.name}</ProblemItemTitle>
-          <a href={problem.link} target="_blank">
-            <LinkIcon></LinkIcon>
-          </a>
-        </ProblemItem>
-      ))}
+            <PracticeItemTitle>{practice.title}</PracticeItemTitle>
+            <PracticeLink href={practice.url} target="_blank">
+              <LinkIcon></LinkIcon>
+            </PracticeLink>
+          </PracticeItem>
+        ))}
+      </PracticeItems>
     </Base>
   );
 };
 
 const Base = styled.div`
-  padding-right: 180px;
-  padding-left: 180px;
-  padding-top: 100px;
-  width: 800px;
+  position: relative;
+  top: 90px;
+  width: 780px;
+  height: 1024px;
   margin: 0 auto;
 `;
 
-const ProblemMenu = styled.div`
-  padding-bottom: 36px;
-  font-size: 24px;
-  font-family: "Noto Sans JP", sans-serif;
+const PracticeMenu = styled.div`
+  padding-left: 48px;
+  font-size: 48px;
+  font-family: "Poppins", "Noto Sans JP", sans-serif;
 `;
 
-const ProblemItem = styled.div`
+const PracticeItems = styled.div`
+  padding-top: 36px;
+  padding-left: 48px;
+`;
+
+const PracticeItem = styled.div`
   padding-bottom: 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+`;
+
+const PracticeLink = styled.a`
   display: flex;
   align-items: center;
 `;
 
 const CheckCircleIcon = styled(FaRegCheckCircle)`
-  text-align: center;
-  padding-right: 38px;
-  font-size: 36px;
+  padding-right: 36px;
+  width: 40px;
+  height: 40px;
 `;
 
 const EmptyCircleIcon = styled(FaRegCircle)`
   padding-right: 38px;
-  font-size: 36px;
+  width: 36px;
+  height: 36px;
 `;
 
 const LinkIcon = styled(IoMdLink)`
-  text-align: center;
-  font-size: 40px;
-  flex-basis: 48px;
+  width: 48px;
+  height: 48px;
+  padding-right: 48px;
   color: #bdbdbd;
   cursor: pointer;
   &:hover {
@@ -95,16 +87,15 @@ const LinkIcon = styled(IoMdLink)`
   }
 `;
 
-const ProblemItemTitle = styled.div`
-  flex-basis: 460px;
+const PracticeItemTitle = styled.div`
+  flex-basis: 500px;
 
-  font-style: normal;
-  font-size: 22px;
-  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-family: "Poppins", "Roboto", sans-serif;
   cursor: pointer;
   &:hover {
     color: #0b8aff;
   }
 `;
 
-export default ProblemItemList;
+export default PracticeItemList;
