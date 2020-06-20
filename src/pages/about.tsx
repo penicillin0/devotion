@@ -1,5 +1,5 @@
 import App from "../components/App";
-import ProblemItemList from "../components/ProblemItemList";
+import PracticeItemList from "../components/ProblemItemList";
 import { RecoilRoot } from "recoil";
 
 export default function About() {
@@ -7,7 +7,7 @@ export default function About() {
     <RecoilRoot>
       <App>
         <p>About Page</p>
-        <ProblemItemList></ProblemItemList>
+        <PracticeItemList></PracticeItemList>
       </App>
     </RecoilRoot>
   );
