@@ -2,6 +2,13 @@ import React, { useEffect } from "react";
 import Header from "./Header";
 import firebase from "../firebase/clientApp";
 import { atom, useSetRecoilState, RecoilRoot } from "recoil";
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0
+  }
+`
 
 export const practicesState = atom<
   {
@@ -36,6 +43,7 @@ const App: React.FC = ({ children }) => {
 
   return (
     <main>
+      <GlobalStyle></GlobalStyle>
       <Header />
       {children}
     </main>
