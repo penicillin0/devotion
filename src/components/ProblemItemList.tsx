@@ -7,6 +7,8 @@ import { useRecoilValue } from "recoil";
 
 type Props = {};
 
+const HeaderFontFamily = `"Poppins", "Noto Sans JP", sans-serif`;
+
 const PracticeItemList: React.FC<Props> = (props) => {
   const practices = useRecoilValue(practicesState);
   console.log(practices);
@@ -39,7 +41,7 @@ const Base = styled.div`
 const PracticeMenu = styled.div`
   padding-left: 48px;
   font-size: 48px;
-  font-family: "Poppins", "Noto Sans JP", sans-serif;
+  font-family: ${HeaderFontFamily};
 `;
 
 const PracticeItems = styled.div`
@@ -86,7 +88,7 @@ const PracticeItemTitle = styled.div`
   flex-basis: 500px;
 
   font-size: 24px;
-  font-family: "Poppins", "Roboto", sans-serif;
+  font-family: ${HeaderFontFamily};
   cursor: pointer;
   &:hover {
     color: #0b8aff;
