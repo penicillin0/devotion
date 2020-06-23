@@ -1,12 +1,11 @@
 import App from "../components/App";
-import PracticeItemList from "../components/ProblemItemList";
+import PracticeItemList from "../components/PracticeItemList";
 import { RecoilRoot } from "recoil";
 
-export default function About() {
+export default function Practices() {
   return (
     <RecoilRoot>
       <App>
-        <p>About Page</p>
         <PracticeItemList></PracticeItemList>
       </App>
     </RecoilRoot>
