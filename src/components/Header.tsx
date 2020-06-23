@@ -6,8 +6,8 @@ const Header: React.FC<{ pathname?: string }> = ({ pathname }) => (
     <Link href="/">
       <a className={pathname === "/" ? "is-active" : ""}>Home</a>
     </Link>{" "}
-    <Link href="/about">
-      <a className={pathname === "/about" ? "is-active" : ""}>About</a>
+    <Link href="/practices">
+      <a className={pathname === "/practices" ? "is-active" : ""}>Practices</a>
     </Link>
   </header>
 );
