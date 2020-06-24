@@ -34,7 +34,7 @@ const Base = styled.div`
   position: relative;
   top: 90px;
   width: 780px;
-  height: 1024px;
+  height: 2048px;
   margin: 0 auto;
 `;
 
