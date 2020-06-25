@@ -8,7 +8,7 @@ const HOME_PATH = "/";
 const PRACTICES_PATH = "/practices";
 
 const Header: React.FC<{ pathname?: string }> = ({ pathname }) => (
-  <HeaderBase>
+  <HeaderBase primary>
     <HomeLink href="/">
       <HomeIcon></HomeIcon>
     </HomeLink>
@@ -27,7 +27,12 @@ const HeaderBase = styled.header`
   position: fixed;
   background-color: #ffffff;
   z-index: 1;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  ${(prpps) =>
+    props.primary &&
+    css`
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    `};
 `;
 
 const HomeLink = styled.a`
