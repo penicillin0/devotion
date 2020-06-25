@@ -39,6 +39,7 @@ const Base = styled.div`
 `;
 
 const PracticeMenu = styled.div`
+  padding-top: 80px;  
   padding-left: 48px;
   font-size: 48px;
   font-family: ${HeaderFontFamily};
