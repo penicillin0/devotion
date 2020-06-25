@@ -3,16 +3,20 @@ import Link from "next/link";
 import styled from "styled-components";
 import { TiHome } from "react-icons/ti";
 
+const LITGHT_BLUE500 = `#37add7`;
+const HOME_PATH = "/";
+const PRACTICES_PATH = "/practices";
+
 const Header: React.FC<{ pathname?: string }> = ({ pathname }) => (
   <HeaderBase>
     <HomeLink href="/">
       <HomeIcon></HomeIcon>
     </HomeLink>
     <Link href="/">
-      <a className={pathname === "/" ? "is-active" : ""}>Home</a>
+      <a className={pathname === HOME_PATH ? "is-active" : ""}>Home</a>
     </Link>{" "}
     <Link href="/practices">
-      <a className={pathname === "/practices" ? "is-active" : ""}>Practices</a>
+      <a className={pathname === PRACTICES_PATH ? "is-active" : ""}>Practices</a>
     </Link>
   </HeaderBase>
 );
@@ -22,9 +26,8 @@ const HeaderBase = styled.header`
   height: 100px;
   position: fixed;
   background-color: #ffffff;
-  z-index:1;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);;
-  
+  z-index: 1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const HomeLink = styled.a`
@@ -37,7 +40,7 @@ const HomeIcon = styled(TiHome)`
   height: 48px;
   padding-top: 28px;
   padding-left: 48px;
-  color: #37add7;
+  color: ${LITGHT_BLUE500};
   cursor: pointer;
 `;
 

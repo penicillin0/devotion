@@ -8,6 +8,7 @@ import { useRecoilValue } from "recoil";
 type Props = {};
 
 const HeaderFontFamily = `"Poppins", "Noto Sans JP", sans-serif`;
+const LINK_HOVER_CLORO = `#0B8AFF`;
 
 const PracticeItemList: React.FC<Props> = (props) => {
   const practices = useRecoilValue(practicesState);
@@ -81,7 +82,7 @@ const LinkIcon = styled(IoMdLink)`
   color: #bdbdbd;
   cursor: pointer;
   &:hover {
-    color: #0b8aff;
+    color: ${LINK_HOVER_CLORO};
   }
 `;
 
@@ -92,7 +93,7 @@ const PracticeItemTitle = styled.div`
   font-family: ${HeaderFontFamily};
   cursor: pointer;
   &:hover {
-    color: #0b8aff;
+    color: ${LINK_HOVER_CLORO};
   }
 `;
 
