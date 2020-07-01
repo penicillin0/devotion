@@ -4,22 +4,24 @@ import styled from "styled-components";
 import { TiHome } from "react-icons/ti";
 
 const LITGHT_BLUE500 = `#37add7`;
-const HOME_PATH = "/";
+const HOME_PATH = "/"; 
 const PRACTICES_PATH = "/practices";
 
-const Header: React.FC<{ pathname?: string }> = ({ pathname }) => (
-  <HeaderBase primary>
+const Header: React.FC<{ pathname?: string }> = ({ pathname }) => {
+
+return (
+  <HeaderBase>
     <HomeLink href="/">
       <HomeIcon></HomeIcon>
     </HomeLink>
     <Link href="/">
       <a className={pathname === HOME_PATH ? "is-active" : ""}>Home</a>
-    </Link>{" "}
+    </Link>
     <Link href="/practices">
       <a className={pathname === PRACTICES_PATH ? "is-active" : ""}>Practices</a>
     </Link>
   </HeaderBase>
-);
+)};
 
 const HeaderBase = styled.header`
   width: 100%;
@@ -27,12 +29,6 @@ const HeaderBase = styled.header`
   position: fixed;
   background-color: #ffffff;
   z-index: 1;
-
-  ${(prpps) =>
-    props.primary &&
-    css`
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    `};
 `;
 
 const HomeLink = styled.a`
