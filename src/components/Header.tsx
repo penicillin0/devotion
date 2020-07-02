@@ -2,6 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { TiHome } from "react-icons/ti";
+import { BsCardChecklist } from "react-icons/bs";
 
 const LITGHT_BLUE500 = `#37add7`;
 const HOME_PATH = "/"; 
@@ -11,15 +12,12 @@ const Header: React.FC<{ pathname?: string }> = ({ pathname }) => {
 
 return (
   <HeaderBase>
-    <HomeLink href="/">
+    <LinkItem href={HOME_PATH}>
       <HomeIcon></HomeIcon>
-    </HomeLink>
-    <Link href="/">
-      <a className={pathname === HOME_PATH ? "is-active" : ""}>Home</a>
-    </Link>
-    <Link href="/practices">
-      <a className={pathname === PRACTICES_PATH ? "is-active" : ""}>Practices</a>
-    </Link>
+    </LinkItem>
+    <LinkItem href={PRACTICES_PATH}>
+      <PracticeIcon></PracticeIcon>
+    </LinkItem>
   </HeaderBase>
 )};
 
@@ -27,11 +25,14 @@ const HeaderBase = styled.header`
   width: 100%;
   height: 100px;
   position: fixed;
+  display: flex;
+  flex-direction: row;
   background-color: #ffffff;
   z-index: 1;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 `;
 
-const HomeLink = styled.a`
+const LinkItem = styled.a`
   display: flex;
   align-items: center;
 `;
@@ -39,7 +40,14 @@ const HomeLink = styled.a`
 const HomeIcon = styled(TiHome)`
   width: 48px;
   height: 48px;
-  padding-top: 28px;
+  padding-left: 48px;
+  color: ${LITGHT_BLUE500};
+  cursor: pointer;
+`;
+
+const PracticeIcon = styled(BsCardChecklist)`
+  width: 48px;
+  height: 48px;
   padding-left: 48px;
   color: ${LITGHT_BLUE500};
   cursor: pointer;
