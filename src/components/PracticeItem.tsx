@@ -12,9 +12,14 @@ interface Practice {
 }
 
 const PracticeItem: React.FC<Practice> = ({ title, url }) => {
+  const [isChecked, setIsChecked] = useState(false);
   return (
     <Base>
-      <CheckCircleIcon color="mediumseagreen"></CheckCircleIcon>
+      {isChecked ? (
+        <CheckCircleIcon color="mediumseagreen" onClick={() => setIsChecked(false)}></CheckCircleIcon>
+      ) : (
+        <EmptyCircleIcon color="mediumseagreen" onClick={() => setIsChecked(true)}></EmptyCircleIcon>
+      )}
       <PracticeItemTitle>{title}</PracticeItemTitle>
       <PracticeLink href={url} target="_blank">
         <LinkIcon></LinkIcon>
