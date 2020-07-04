@@ -2,9 +2,8 @@ import React, { useState, Props } from "react";
 import styled from "styled-components";
 import { FaRegCheckCircle, FaRegCircle } from "react-icons/fa";
 import { IoMdLink } from "react-icons/io";
-
-const LINK_HOVER_CLORO = `#0B8AFF`;
-const HeaderFontFamily = `"Poppins", "Noto Sans JP", sans-serif`;
+import { FontFamily } from "../utils/font";
+import { LINK_HOVER_CLORO } from '../utils/color';
 
 interface Practice {
   title: string;
@@ -67,7 +66,7 @@ const PracticeItemTitle = styled.div`
   flex-basis: 500px;
 
   font-size: 24px;
-  font-family: ${HeaderFontFamily};
+  font-family: ${FontFamily};
   cursor: pointer;
   &:hover {
     color: ${LINK_HOVER_CLORO};

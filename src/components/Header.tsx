@@ -1,10 +1,9 @@
 import * as React from "react";
-import Link from "next/link";
 import styled from "styled-components";
 import { TiHome } from "react-icons/ti";
 import { BsCardChecklist } from "react-icons/bs";
+import { LITGHT_BLUE500 } from '../utils/color';
 
-const LITGHT_BLUE500 = `#37add7`;
 const HOME_PATH = "/"; 
 const PRACTICES_PATH = "/practices";
 
