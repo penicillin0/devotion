@@ -1,26 +1,35 @@
-import React, { useState, Props } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FaRegCheckCircle, FaRegCircle } from "react-icons/fa";
 import { IoMdLink } from "react-icons/io";
 import { FontFamily } from "../utils/font";
-import { LINK_HOVER_CLORO } from '../utils/color';
+import { LINK_HOVER_CLORO } from "../utils/color";
 
-interface Practice {
+type Props = {
   title: string;
   url: string;
-}
+};
 
-const PracticeItem: React.FC<Practice> = ({ title, url }) => {
+const PracticeItem: React.FC<Props> = (props) => {
   const [isChecked, setIsChecked] = useState(false);
+
+  const onClickEmptyIcon = () => {
+    setIsChecked(true);
+  };
+
+  const onClickCheckIcon = () => {
+    setIsChecked(false);
+  };
+
   return (
     <Base>
       {isChecked ? (
-        <CheckCircleIcon color="mediumseagreen" onClick={() => setIsChecked(false)}></CheckCircleIcon>
+        <CheckCircleIcon color="mediumseagreen" onClick={onClickCheckIcon}></CheckCircleIcon>
       ) : (
-        <EmptyCircleIcon color="mediumseagreen" onClick={() => setIsChecked(true)}></EmptyCircleIcon>
+        <EmptyCircleIcon color="mediumseagreen" onClick={onClickEmptyIcon}></EmptyCircleIcon>
       )}
-      <PracticeItemTitle>{title}</PracticeItemTitle>
-      <PracticeLink href={url} target="_blank">
+      <PracticeItemTitle>{props.title}</PracticeItemTitle>
+      <PracticeLink href={props.url} target="_blank">
         <LinkIcon></LinkIcon>
       </PracticeLink>
     </Base>
